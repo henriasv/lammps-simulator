@@ -43,7 +43,7 @@ class Simulator:
             head, tail = os.path.split(file)
             shutil.copyfile(file, self.wd + tail)
             
-    def create_folder_in_wd(self, *foldername):
+    def create_folder_in_wd(self, foldername):
         """Create a folder in the working directory, fo example to 
            store output data in. 
         :param foldername: name of folder to create
