@@ -42,7 +42,16 @@ class Simulator:
         for file in filename:
             head, tail = os.path.split(file)
             shutil.copyfile(file, self.wd + tail)
-
+            
+    def create_folder_in_wd(self, *foldername):
+        """Create a folder in the working directory, fo example to 
+           store output data in. 
+        :param foldername: name of folder or list of names of folders to create
+        :type filename: str of list of str
+        """
+        for folder in foldername:
+            os.makedirs(self.wd + folder)
+           
     def set_input_script(self, filename, copy=True, **var):
         """Set LAMMPS script
 
